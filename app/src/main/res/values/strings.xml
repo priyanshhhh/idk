@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">StoryGrab</string>
+    <string name="home">Home</string>
+    <string name="watch_list">Watch List</string>
+    <string name="downloads">Downloads</string>
+    <string name="settings">Settings</string>
+    
+    <!-- Login -->
+    <string name="login_title">Login to Telegram</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="otp_code">OTP Code</string>
+    <string name="send_code">Send Code</string>
+    <string name="verify_code">Verify Code</string>
+    
+    <!-- Premium -->
+    <string name="premium_title">Go Premium</string>
+    <string name="unlimited_downloads">Unlimited Downloads</string>
+    <string name="auto_check">Auto-check for new stories</string>
+    <string name="no_ads">No Ads</string>
+    <string name="subscribe_now">Subscribe Now</string>
+    
+    <!-- Messages -->
+    <string name="download_started">Download started…</string>
+    <string name="download_success">Download successful!</string>
+    <string name="download_failed">Download failed.</string>
+    <string name="account_private">This account is private.</string>
+    <string name="story_unavailable">Story no longer available.</string>
+</resources>
