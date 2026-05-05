@@ -3,13 +3,16 @@ name: Android Release CI
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch: # Allows manual triggering from the Actions tab
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: set up JDK 17
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'
