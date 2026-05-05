@@ -1,9 +1,7 @@
-name: Android CI
+name: Android Release CI
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -18,14 +16,19 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    - name: Create local.properties
+      run: |
+        echo "telegram.api_id=209235" > local.properties
+        echo "telegram.api_hash=169ee702e1df4b6e66d80311db36cc43" >> local.properties
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
 
-    - name: Upload APK
+    - name: Upload Release APK
       uses: actions/upload-artifact@v3
       with:
-        name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: app-release
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
